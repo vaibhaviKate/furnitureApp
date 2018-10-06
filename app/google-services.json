@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "16858742958",
+    "firebase_url": "https://restaurantfinder-3f41b.firebaseio.com",
+    "project_id": "restaurantfinder-3f41b",
+    "storage_bucket": "restaurantfinder-3f41b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16858742958:android:b38dd3f9a1d6d2d4",
+        "android_client_info": {
+          "package_name": "com.example.vaibhavi.furnitureapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16858742958-438uqead2f4h83ott3sohfj4bqbsp6s9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vaibhavi.furnitureapp",
+            "certificate_hash": "7813ef36bc335305c3961d31ddaea790be7dca91"
+          }
+        },
+        {
+          "client_id": "16858742958-mag9kpo3o2if5lkgao7ap3qjcvllp79l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt1EO59hwh0lYflLAxX1nFA1DiJrQqRYg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16858742958-mag9kpo3o2if5lkgao7ap3qjcvllp79l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

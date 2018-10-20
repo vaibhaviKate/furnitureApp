@@ -16,11 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
-
+        <activity android:name=".Sofas">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomePage" />
+        </activity>
+        <activity android:name=".SofasDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Sofas"
+                />
+        </activity>
     </application>
 
 </manifest>

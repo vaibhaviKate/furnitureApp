@@ -16,10 +16,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.squareup.picasso.Picasso
-import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.activity_sofas.*
-import kotlinx.android.synthetic.main.cart_sofa.view.*
 
 class SofasDetails : AppCompatActivity() {
 
@@ -31,9 +27,9 @@ class SofasDetails : AppCompatActivity() {
 
         val intent = intent
         val furnitureName = intent!!.getStringExtra("furnitureName")
-        val furniturePrice = intent!!.getIntExtra("furniturePrice", -1)
-        val furnitureImage = intent!!.getStringExtra("furnitureImage")
-        Log.d("Details", "$furnitureImage")
+        val furniturePrice = intent.getIntExtra("furniturePrice", -1)
+        val furnitureImage = intent.getStringExtra("furnitureImage")
+        Log.d("Details", furnitureImage)
 
         supportActionBar?.title = furnitureName
         //LocalBroadcastManager.getInstance(this).registerReceiver(broadCastReceiver, IntentFilter("message"))
@@ -61,12 +57,14 @@ class SofasDetails : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
 
                 p0.children.forEach {
+                    //Log.d("SofasDetails", it.getValue(FurnitureDesc::class.java)!!.description.toLongOrNull())
 
                     if(furnitureName == it.getValue(FurnitureDesc::class.java)!!.type){
-                        val desc = it.getValue(FurnitureDesc::class.java)!!.description.toLong()
+
+                        val desc = it.getValue(FurnitureDesc::class.java)!!.description
 
                         val itemDesc = findViewById<View>(R.id.detailItemDetails) as TextView
-                        itemDesc.text = desc.toString()
+                        itemDesc.text = desc
                     }
 
                 }
